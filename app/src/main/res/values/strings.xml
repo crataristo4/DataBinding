@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Data Binding</string>
+    <string name="got_to_update_ui_components">Got to update UI components</string>
+    <string name="click_with_params">Click with params</string>
+    <string name="long_click">Long Click</string>
+    <string name="simple_click">Simple click</string>
+    <string name="fnameIs">First name is>></string>
+    <string name="lnameIs">Last name is>></string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="update_names">Update Names</string>
+    <string name="open_recycler_data_binding">Open Recycler data binding</string>
+    <string name="two_way_data_binding">Two way data binding</string>
+
+
+    <string-array name="names">
+        <item>Kofi Hammon</item>
+        <item>Jojo Paski</item>
+        <item>Sunny Killer</item>
+        <item>Kopis Azrah</item>
+        <item>Dukis Shun</item>
+        <item>Kim Yovi</item>
+        <item>Kadis rEMIS</item>
+        <item>Koko Shantel</item>
+        <item>Fifi Ommon</item>
+        <item>yUM Vitta</item>
+    </string-array>
+
+    <string-array name="email">
+        <item>KofiHammon@gmail.com</item>
+        <item>JojoPaski@gmail.com</item>
+        <item>SunnyKiller@gmail.com</item>
+        <item>KopisAzrah@gmail.com</item>
+        <item>DukisShun@gmail.com</item>
+        <item>KimYovi@gmail.com</item>
+        <item>KadisrEMIS@gmail.com</item>
+        <item>KokoShantel@gmail.com</item>
+        <item>FifiOmmon@gmail.com</item>
+        <item>yUMVitta@gmail.com</item>
+    </string-array>
+</resources>

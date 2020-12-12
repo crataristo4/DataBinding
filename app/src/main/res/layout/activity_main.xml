@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:id="@+id/layout">
+
+    <data>
+
+        <variable
+            name="contacts"
+            type="com.app.databinding.Contact" />
+        <variable
+            name="clickHandler"
+            type="com.app.databinding.ClickHandler" />
+    </data>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            bind:title="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <TextView
+            android:id="@+id/txtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@{contacts.firstName}" />
+
+        <TextView
+            android:id="@+id/txtLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{contacts.otherName}"
+            android:textSize="18sp" />
+
+        <include
+            bind:contacts = "@{contacts}"
+            android:id="@+id/content"
+            layout="@layout/content_main"
+           />
+
+
+    </LinearLayout>
+
+
+</layout>

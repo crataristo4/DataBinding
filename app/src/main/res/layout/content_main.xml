@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="contacts"
+            type="com.app.databinding.Contact" />
+
+        <variable
+            name="clickHandler"
+            type="com.app.databinding.ClickHandler" />
+    </data>
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@{contacts.surName}"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#673AB7"
+        android:onClick="@{clickHandler::onButtonClicked}"
+        android:text="@string/simple_click"
+        android:textColor="#F4F4F4" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#FFEB3B"
+        android:onLongClick="@{clickHandler::onLongClickPressed}"
+        android:text="@string/long_click"
+        android:textColor="#FDFDFE" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#F44336"
+        android:onClick="@{(v)->clickHandler.onButtonClickedWithParam(v,contacts)}"
+        android:text="@string/click_with_params"
+        android:textColor="#FDFDFE" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#084005"
+        android:onClick="@{clickHandler::gotoUpdateUI}"
+        android:text="@string/got_to_update_ui_components"
+        android:textColor="#fff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#FF5722"
+        android:onClick="@{clickHandler::gotoRecyclerView}"
+        android:text="@string/open_recycler_data_binding"
+        android:textColor="#fff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#00BCD4"
+        android:onClick="@{clickHandler::gotoTwoWayBingding}"
+        android:text="@string/two_way_data_binding"
+        android:textColor="#fff" />
+</LinearLayout>
+
+
+</layout>
